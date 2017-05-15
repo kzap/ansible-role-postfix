@@ -7,3 +7,11 @@
     state: present
   with_items: "{{ postfix_configuration_items }}"
   notify: restart postfix
+
+- name: "Override Postfix Configuration Files"
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ postfix_conf_path }}/{{ item.dest }}"
+    force: "{{ item.force | default('yes') }}"
+  with_items: "{{ postfix_configuration_files }}"
+  notify: restart postfix

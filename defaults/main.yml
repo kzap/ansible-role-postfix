@@ -8,3 +8,8 @@ postfix_restart_state: restarted
 postfix_configuration_items: []
 #  - regexp: "^relayhost = "
 #    line: "relayhost = [smtp.mailgun.org]:587"
+
+postfix_configuration_files: []
+#  - src: "{{ inventory_dir }}/templates/postfix/main.cf.j2"
+#    dest: "main.cf"
+#    force: no
