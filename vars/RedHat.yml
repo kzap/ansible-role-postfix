@@ -1,0 +1,6 @@
+---
+postfix_service: postfix
+postfix_daemon: postfix
+postfix_daemon_path: /usr/sbin/
+postfix_conf_path: /etc/postfix
+postfix_conf_filename: main.cf

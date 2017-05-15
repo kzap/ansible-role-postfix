@@ -1,2 +1,10 @@
 ---
 # defaults file for ansible-role-postfix
+
+# Set postfix state when configuration changes are made. Recommended values:
+# `restarted` or `reloaded`
+postfix_restart_state: restarted
+
+postfix_configuration_items: []
+#  - regexp: "^relayhost = "
+#    line: "relayhost = [smtp.mailgun.org]:587"

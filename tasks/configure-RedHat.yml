@@ -1,0 +1,9 @@
+---
+- name: Configure Postfix.
+  lineinfile:
+    dest: "{{ postfix_conf_path }}/{{ postfix_conf_filename }}"
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+    state: present
+  with_items: "{{ postfix_configuration_items }}"
+  notify: restart postfix
